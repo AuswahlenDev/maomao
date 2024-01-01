@@ -65,7 +65,7 @@ class MusicCog(commands.Cog):
 
             player: MaomaoPlayer = event.player
             if player.queue:
-                track: mafic.Track = player.queue.popleft()
+                track: mafic.Track = player.queue.pop()
                 
                 metadata: Metadata = self.metadep.get(track)
                 if metadata:
